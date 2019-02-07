@@ -7,16 +7,16 @@ public class QueenBoard{
   }
 
   private boolean addQueen(int r, int c){
-    if(int[r][c] == -1){
+    if(board[r][c] == -1){
       System.out.println("Queen already exists!");
       return false;
     }
-    int[r][c] = -1;
+    board[r][c] = -1;
     for(int i = 0; i < size && i != c; i++){
-      int[r][i] += 1;
+      board[r][i] += 1;
     }
     for(int j = 0; j < size && j != r; j++){
-      int[j][c] += 1;
+      board[j][c] += 1;
     }
     return true;
   }
