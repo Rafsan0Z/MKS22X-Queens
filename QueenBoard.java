@@ -48,6 +48,14 @@ public class QueenBoard{
 
   public String toString(){
     String result = "";
+    for(int i = 0; i < size; i++){
+		for(int j = 0; j < size; j++){
+			if(board[i][j] == -1){result += "Q";}
+			if(j == size - 1;){result += '\n';}
+			else{result += "__";}
+	}
+	}
+  return result;
   }
 
   public static void main(String[] args){
