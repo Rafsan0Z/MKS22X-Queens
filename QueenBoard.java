@@ -39,7 +39,13 @@ public class QueenBoard{
   }
 
   public boolean solve(){
-    return true;
+    addQueen(0,0);
+	 for(int i = 1; i < size; i++){
+		 for(int j = 2; j < size; j++){
+			 if(!solveHelper(i,j)){return false;}
+	 }
+	 }
+	 return true;
   }
 
   public int countSolutions(){
