@@ -18,6 +18,7 @@ public class QueenBoard{
     for(int j = 0; j < size && j != r; j++){
       int[j][c] += 1;
     }
+    return true;
   }
 
   private boolean removeQueen(int r, int c){
