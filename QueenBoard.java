@@ -25,6 +25,10 @@ public class QueenBoard{
     return true;
   }
 
+  public boolean solve(){
+    return true;
+  }
+
   public static void main(String[] args){
 
   }
