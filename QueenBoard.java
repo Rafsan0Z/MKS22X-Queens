@@ -3,6 +3,7 @@ public class QueenBoard{
 
   private int[][] board;
   private int size;
+  private int Solutions;
 
   public QueenBoard(int Size){
     board = new int[Size][Size];
@@ -49,7 +50,7 @@ public class QueenBoard{
   }
 
   public int countSolutions(){
-    return 0;
+    return Solutions;
   }
 
   public String toString(){
