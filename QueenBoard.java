@@ -29,6 +29,10 @@ public class QueenBoard{
     return true;
   }
 
+  public int countSolutions(){
+    return 0;
+  }
+
   public static void main(String[] args){
 
   }
