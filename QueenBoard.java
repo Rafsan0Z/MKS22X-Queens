@@ -41,6 +41,12 @@ public class QueenBoard{
     System.out.println("Input a size: ");
 	  int num = in.nextInt();
 	  QueenBoard puzzle = new QueenBoard(num);
+    System.out.println("Chose one of the following options: ");
+	  System.out.println("1. Add a queen");
+	  System.out.println("2. Remove a queen");
+	  System.out.println("3. Check if board is solvable");
+	  System.out.println("4. Find total number of solutions");
+	  System.out.println("5. Print the board");
   }
 
 }
