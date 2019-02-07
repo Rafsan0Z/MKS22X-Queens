@@ -7,7 +7,10 @@ public class QueenBoard{
   }
 
   private boolean addQueen(int r, int c){
-    return true;
+    if(int[r][c] == -1){
+      System.out.println("Queen already exists!");
+      return false;
+    }
   }
 
   private boolean removeQueen(int r, int c){
