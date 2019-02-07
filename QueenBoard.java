@@ -6,4 +6,12 @@ public class QueenBoard{
     board = new int[size][size];
   }
 
+  private boolean addQueen(int r, int c){
+    return true;
+  }
+
+  public static void main(String[] args){
+    
+  }
+
 }
