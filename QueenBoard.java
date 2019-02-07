@@ -29,6 +29,13 @@ public class QueenBoard{
 		System.out.println("No Queen Found");
 		return false;
 	}
+   for(int i = 0; i < size && i != c; i++){
+		 board[r][i] -= 1;
+	 }
+	 for(int j = 0; j < size && j != r; j++){
+		 board[j][c] -= 1;
+	 }
+	 return true;
   }
 
   public boolean solve(){
