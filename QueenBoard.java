@@ -49,6 +49,8 @@ public class QueenBoard{
 	 return true;
   }
 
+  //public boolean solveHelper(int r, int c){}
+
   public int countSolutions(){
     return Solutions;
   }
