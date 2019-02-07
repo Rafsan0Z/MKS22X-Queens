@@ -50,6 +50,20 @@ public class QueenBoard{
     System.out.println("------------------------");
 	  System.out.println("Input a number corresponding to the option");
 	  int option = in.nextInt();
+    if(option == 1){
+		System.out.println("Input a row number: ");
+		int row = in.nextInt();
+		System.out.println("Input a column number: ");
+		int col = in.nextInt();
+		puzzle.addQueen(row,col);
+	}
+	if(option == 2){
+		System.out.println("Input a row number: ");
+		int row = in.nextInt();
+		System.out.println("Input a column number: ");
+		int col = in.nextInt();
+		puzzle.removeQueen(row,col);
+	}
   }
 
 }
