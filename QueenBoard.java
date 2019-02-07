@@ -95,6 +95,18 @@ public class QueenBoard{
 		int col = in.nextInt();
 		puzzle.removeQueen(row,col);
 	}
+  if(option == 3){
+		if(puzzle.solve()){
+			System.out.println("Yes, the puzzle is solvable");
+		}
+		else{
+			System.out.println("Sorry, the puzzle is not solvable");
+		}
+	}
+	if(option == 4){
+		int total = puzzle.countSolutions();
+		System.out.println("The total number of solutions are: " + total);
+	}
   }
 
 }
