@@ -25,7 +25,10 @@ public class QueenBoard{
   }
 
   private boolean removeQueen(int r, int c){
-    return true;
+    if(board[r][c] != -1){
+		System.out.println("No Queen Found");
+		return false;
+	}
   }
 
   public boolean solve(){
