@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class QueenBoard{
 
   private int[][] board;
@@ -36,7 +37,7 @@ public class QueenBoard{
   }
 
   public static void main(String[] args){
-
+    Scanner in = Scanner(System.in);
   }
 
 }
