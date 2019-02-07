@@ -10,8 +10,12 @@ public class QueenBoard{
     return true;
   }
 
+  private boolean removeQueen(int r, int c){
+    return true;
+  }
+
   public static void main(String[] args){
-    
+
   }
 
 }
