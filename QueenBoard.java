@@ -46,6 +46,10 @@ public class QueenBoard{
     return 0;
   }
 
+  public String toString(){
+    String result = "";
+  }
+
   public static void main(String[] args){
     Scanner in = Scanner(System.in);
     System.out.println("Input a size: ");
