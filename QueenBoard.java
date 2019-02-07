@@ -107,6 +107,13 @@ public class QueenBoard{
 		int total = puzzle.countSolutions();
 		System.out.println("The total number of solutions are: " + total);
 	}
+  if(option == 5){
+		String print = puzzle.toString();
+		System.out.println(print);
+	}
+	else{
+		System.out.println("Invalid Input");
+	}
   }
 
 }
