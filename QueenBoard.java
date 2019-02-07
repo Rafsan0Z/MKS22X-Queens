@@ -38,6 +38,9 @@ public class QueenBoard{
 
   public static void main(String[] args){
     Scanner in = Scanner(System.in);
+    System.out.println("Input a size: ");
+	  int num = in.nextInt();
+	  QueenBoard puzzle = new QueenBoard(num);
   }
 
 }
