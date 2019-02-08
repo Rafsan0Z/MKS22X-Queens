@@ -43,7 +43,8 @@ public class QueenBoard{
     addQueen(0,0);
 	 for(int i = 1; i < size; i++){
 		 for(int j = 2; j < size; j++){
-			 if(!solveHelper(i,j)){return false;}
+//			 if(!solveHelper(i,j)){return false;}
+         return true;
 	 }
 	 }
 	 return true;
@@ -60,7 +61,7 @@ public class QueenBoard{
     for(int i = 0; i < size; i++){
 		for(int j = 0; j < size; j++){
 			if(board[i][j] == -1){result += "Q";}
-			if(j == size - 1;){result += '\n';}
+			if(j == size - 1){result += '\n';}
 			else{result += "__";}
 	}
 	}
@@ -68,7 +69,7 @@ public class QueenBoard{
   }
 
   public static void main(String[] args){
-    Scanner in = Scanner(System.in);
+    Scanner in = new Scanner(System.in);
     System.out.println("Input a size: ");
 	  int num = in.nextInt();
 	  QueenBoard puzzle = new QueenBoard(num);
