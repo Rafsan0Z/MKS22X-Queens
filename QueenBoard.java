@@ -90,6 +90,8 @@ public class QueenBoard{
 		System.out.println("Input a column number: ");
 		int col = in.nextInt() - 1;
 		puzzle.addQueen(row,col);
+    System.out.println("Chose another Option: ");
+    option = in.nextInt();
 	}
 	else if(option == 2){
 		System.out.println("Input a row number: ");
@@ -97,6 +99,8 @@ public class QueenBoard{
 		System.out.println("Input a column number: ");
 		int col = in.nextInt() - 1;
 		puzzle.removeQueen(row,col);
+    System.out.println("Chose another Option: ");
+    option = in.nextInt();
 	}
   else if(option == 3){
 		if(puzzle.solve()){
@@ -105,14 +109,20 @@ public class QueenBoard{
 		else{
 			System.out.println("Sorry, the puzzle is not solvable");
 		}
+    System.out.println("Chose another Option: ");
+    option = in.nextInt();
 	}
 	else if(option == 4){
 		int total = puzzle.countSolutions();
 		System.out.println("The total number of solutions are: " + total);
+    System.out.println("Chose another Option: ");
+    option = in.nextInt();
 	}
   else if(option == 5){
 		String print = puzzle.toString();
 		System.out.println(print);
+    System.out.println("Chose another Option: ");
+    option = in.nextInt();
 	}
   else if(option == 0){
     running = false;
