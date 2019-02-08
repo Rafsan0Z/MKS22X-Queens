@@ -84,16 +84,16 @@ public class QueenBoard{
 	  int option = in.nextInt();
     if(option == 1){
 		System.out.println("Input a row number: ");
-		int row = in.nextInt();
+		int row = in.nextInt() - 1;
 		System.out.println("Input a column number: ");
-		int col = in.nextInt();
+		int col = in.nextInt() - 1;
 		puzzle.addQueen(row,col);
 	}
 	if(option == 2){
 		System.out.println("Input a row number: ");
-		int row = in.nextInt();
+		int row = in.nextInt() - 1;
 		System.out.println("Input a column number: ");
-		int col = in.nextInt();
+		int col = in.nextInt() - 1;
 		puzzle.removeQueen(row,col);
 	}
   if(option == 3){
