@@ -15,6 +15,14 @@ public class QueenBoard{
     return size;
   }
 
+  private vooid MarkUp(){
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
+
+      }
+    }
+  }
+
   private boolean addQueen(int r, int c){
     if(r >= size || c >= size || r < 0 || c < 0){
       return false;
