@@ -37,6 +37,7 @@ public class QueenBoard{
 	 for(int j = 0; j < size && j != r; j++){
 		 board[j][c] -= 1;
 	 }
+   System.out.println("Queen Succesfully removed!")
 	 return true;
   }
 
