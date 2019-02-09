@@ -108,8 +108,8 @@ public class QueenBoard{
 	  System.out.println("Input a number corresponding to the option");
 	  int option = in.nextInt();
     boolean running = true;
-    try{
     while(running){
+    try{
     if(option == 1){
 		System.out.println("Input a row number: ");
 		int row = in.nextInt() - 1;
@@ -161,9 +161,10 @@ public class QueenBoard{
 	else{
 		System.out.println("Invalid Input");
 	}
-}
 } catch(InputMismatchException e){
   System.out.println("Please input a number!");
+  in.next();
+}
 }
   }
 
