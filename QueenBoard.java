@@ -81,8 +81,13 @@ public class QueenBoard{
 
   public static void main(String[] args){
     Scanner in = new Scanner(System.in);
+    int num = 0;
+    try{
     System.out.println("Input a size: ");
-	  int num = in.nextInt();
+	  num = in.nextInt();
+  } catch(InputMismatchException e){
+    System.out.println("Please input a number!");
+  }
 	  QueenBoard puzzle = new QueenBoard(num);
     System.out.println("Welcome to QueenBoard 1.0!!");
     System.out.println("-------------------------------");
