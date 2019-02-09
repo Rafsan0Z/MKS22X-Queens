@@ -23,12 +23,12 @@ public class QueenBoard{
     }
   }
 
-  private void MarkUp(int r, int c){
+  private void MarkUp(int r, int c, int factor){
     for(int i = 0; i < size && i != c; i++){
-      board[r][i] += 1;
+      board[r][i] += 1*factor;
     }
     for(int j = 0; j < size && j != r; j++){
-      board[j][c] += 1;
+      board[j][c] += 1*factor;
     }
   }
 
