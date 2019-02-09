@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 public class QueenBoard{
 
   private int[][] board;
@@ -37,7 +38,7 @@ public class QueenBoard{
 	 for(int j = 0; j < size && j != r; j++){
 		 board[j][c] -= 1;
 	 }
-   System.out.println("Queen Succesfully removed!")
+   System.out.println("Queen Succesfully removed!");
 	 return true;
   }
 
@@ -97,6 +98,7 @@ public class QueenBoard{
 	  System.out.println("Input a number corresponding to the option");
 	  int option = in.nextInt();
     boolean running = true;
+    try{
     while(running){
     if(option == 1){
 		System.out.println("Input a row number: ");
@@ -149,6 +151,9 @@ public class QueenBoard{
 	else{
 		System.out.println("Invalid Input");
 	}
+}
+} catch(InputMismatchException e){
+  System.out.println("Please input a number!");
 }
   }
 
