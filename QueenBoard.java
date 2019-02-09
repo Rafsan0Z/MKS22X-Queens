@@ -24,7 +24,12 @@ public class QueenBoard{
   }
 
   private void MarkUp(int r, int c){
-
+    for(int i = 0; i < size && i != c; i++){
+      board[r][i] += 1;
+    }
+    for(int j = 0; j < size && j != r; j++){
+      board[j][c] += 1;
+    }
   }
 
   private boolean addQueen(int r, int c){
@@ -36,12 +41,7 @@ public class QueenBoard{
       return false;
     }
     board[r][c] = -1;
-    for(int i = 0; i < size && i != c; i++){
-      board[r][i] += 1;
-    }
-    for(int j = 0; j < size && j != r; j++){
-      board[j][c] += 1;
-    }
+    MarkUp(r,c);
     System.out.println("Queen Succesfully added!");
     return true;
   }
