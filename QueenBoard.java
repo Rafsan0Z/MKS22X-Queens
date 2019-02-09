@@ -11,9 +11,12 @@ public class QueenBoard{
     size = Size;
   }
 
+  public getSize(){
+    return size;
+  }
+
   private boolean addQueen(int r, int c){
     if(r >= size || c >= size || r < 0 || c < 0){
-      System.out.println("Invalid row number!");
       return false;
     }
     if(board[r][c] == -1){
