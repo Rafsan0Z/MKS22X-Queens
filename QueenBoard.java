@@ -23,6 +23,10 @@ public class QueenBoard{
     }
   }
 
+  private boolean Queen(int r, int c){
+    return board[r][c] == -1;
+  }
+
   private void MarkUp(int r, int c, int factor){
     for(int i = 0; i < size && i != c; i++){
       board[r][i] += 1*factor;
