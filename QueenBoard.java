@@ -12,7 +12,7 @@ public class QueenBoard{
     setSolution();
   }
 
-  public getSize(){
+  public int getSize(){
     return size;
   }
 
