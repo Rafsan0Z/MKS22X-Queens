@@ -99,7 +99,13 @@ public class QueenBoard{
   }
 
   public void setSolution(){
-
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
+        if(!Queen(i,j)){
+          addQueen(i,j);
+        }
+      }
+    }
   }
 
   public String toString(){
