@@ -51,7 +51,7 @@ public class QueenBoard{
 		System.out.println("No Queen Found");
 		return false;
 	}
-   MarkUp(r,c,-1)''
+   MarkUp(r,c,-1);
    System.out.println("Queen Succesfully removed!");
 	 return true;
   }
@@ -65,6 +65,10 @@ public class QueenBoard{
 	 }
 	 }
 	 return true;
+  }
+
+  public void removeAllQueen(){
+    
   }
 
   //public boolean solveHelper(int r, int c){}
