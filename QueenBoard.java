@@ -77,14 +77,7 @@ public class QueenBoard{
   }
 
   public boolean solve(){
-    addQueen(0,0);
-	 for(int i = 1; i < size; i++){
-		 for(int j = 2; j < size; j++){
-//			 if(!solveHelper(i,j)){return false;}
-         return true;
-	 }
-	 }
-	 return true;
+	   return Solutions > 0;
   }
 
   public void removeAllQueen(){
@@ -106,7 +99,7 @@ public class QueenBoard{
   }
 
   public void setSolution(){
-    
+
   }
 
   public String toString(){
