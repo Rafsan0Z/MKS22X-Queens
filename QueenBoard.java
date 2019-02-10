@@ -38,6 +38,14 @@ public class QueenBoard{
         if(Queen){board[i][j] += 1*factor;}
       }
     }
+    for(int i = r; i > 0; i--){
+      for(int j = c; j < size; j++){
+        if(Queen){board[i][j] += 1*factor;}
+      }
+      for(int k = c; k > 0; k--){
+        if(Queen){board[i][j] += 1*factor;}
+      }
+    }
   }
 
   private boolean addQueen(int r, int c){
