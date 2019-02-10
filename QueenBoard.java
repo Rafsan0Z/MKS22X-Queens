@@ -40,7 +40,7 @@ public class QueenBoard{
         if(Queen(i,j)){board[i][j] += 1*factor;}
       }
       for(int k = c; k > 0; k--){
-        if(Queen(i,k)){board[i][j] += 1*factor;}
+        if(Queen(i,k)){board[i][k] += 1*factor;}
       }
     }
     for(int i = r; i > 0; i--){
@@ -48,7 +48,7 @@ public class QueenBoard{
         if(Queen(i,j)){board[i][j] += 1*factor;}
       }
       for(int k = c; k > 0; k--){
-        if(Queen(i,k)){board[i][j] += 1*factor;}
+        if(Queen(i,k)){board[i][k] += 1*factor;}
       }
     }
   }
@@ -104,7 +104,7 @@ public class QueenBoard{
       for(int j = 0; j < size; j++){
         if(!Queen(i,j)){
           addQueen(i,j);
-          if(r>size-1){Solutions++;}
+          if(i > size-1){Solutions++;}
           removeQueen(i,j);
         }
       }
