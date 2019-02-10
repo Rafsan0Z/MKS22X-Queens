@@ -9,6 +9,7 @@ public class QueenBoard{
   public QueenBoard(int Size){
     board = new int[Size][Size];
     size = Size;
+    setSolution();
   }
 
   public getSize(){
@@ -103,6 +104,8 @@ public class QueenBoard{
       for(int j = 0; j < size; j++){
         if(!Queen(i,j)){
           addQueen(i,j);
+          if(r>size-1){Solutions++;}
+          removeQueen(i,j);
         }
       }
     }
