@@ -63,7 +63,7 @@ public class QueenBoard{
       return false;
     }
     board[r][c] = -1;
-    MarkUp(r,c,1);
+    //MarkUp(r,c,1);
     System.out.println("Queen Succesfully added!");
     return true;
   }
