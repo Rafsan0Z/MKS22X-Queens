@@ -10,7 +10,7 @@ public class QueenBoard{
     board = new int[Size][Size];
     size = Size;
     Solutions = 0;
-    setSolution();
+  //  setSolution();
   }
 
   public int getSize(){
@@ -79,7 +79,8 @@ public class QueenBoard{
   }
 
   public boolean solve(){
-	   return solveHelper(0,0);
+    addQueen(0,0);
+	  return solveHelper(0,0);
   }
 
   public void removeAllQueen(){
@@ -87,7 +88,7 @@ public class QueenBoard{
   }
 
   public boolean solveHelper(int r, int c){
-    if(c >= size -1 && r >= size){return true;}
+    if(c >= size -1 && r >= size - 1){return true;}
     if(board[r][c+1] == 0){
       addQueen(r,c+1);
     }
