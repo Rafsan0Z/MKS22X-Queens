@@ -79,14 +79,20 @@ public class QueenBoard{
   }
 
   public boolean solve(){
-	   return Solutions > 0;
+	   return solveHelper(0,0);
   }
 
   public void removeAllQueen(){
 
   }
 
-  //public boolean solveHelper(int r, int c){}
+  public boolean solveHelper(int r, int c){
+    if(c >= size -1 && r >= size){return true;}
+    if(board[r][c+1] == 0){
+      addQueen(r,c+1);
+    }
+    return solveHelper(r+1,c+1);
+  }
 
   public int countSolutions(){
     return Solutions;
