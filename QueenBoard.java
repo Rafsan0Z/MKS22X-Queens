@@ -45,9 +45,6 @@ public class QueenBoard{
       for(int j = c; j < size; j++){
         if(Queen(i,j)){board[i][j] += 1*factor;}
       }
-      for(int k = c; k > 0; k--){
-        if(Queen(i,k)){board[i][k] += 1*factor;}
-      }
     }
   }
 
