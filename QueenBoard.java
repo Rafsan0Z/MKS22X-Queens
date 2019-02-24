@@ -151,6 +151,7 @@ public class QueenBoard{
 	  System.out.println("4. Find total number of solutions");
 	  System.out.println("5. Print the board");
     System.out.println("6. Clear the board");
+    System.out.println("7. Marked board for Debugging");
     System.out.println("------------------------");
 	  System.out.println("Input a number corresponding to the option");
 	  int option = in.nextInt();
