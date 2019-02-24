@@ -80,7 +80,7 @@ public class QueenBoard{
 	  return solveHelper(0,0);
   }
 
-  public void removeAllQueen(){
+  public void removeAllQueen(){ // removes only the queen not the Marks
     for(int i = 0; i < size; i++){
       for(int j = 0; j < size; j++){
         if(board[i][j] == - 1){board[i][j] = 0;}
