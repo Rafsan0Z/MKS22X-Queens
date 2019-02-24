@@ -37,14 +37,16 @@ public class QueenBoard{
       board[j][c] += 1*factor;
     }
     for(int i = r+1; i < size; i++){
-      for(int j = c+1; j < size; j++){
-        if(!Queen(i,j)){board[i][j] += 1*factor;}
-      }
+      int counter = 1;
+      int j = c + counter;
+      if(!Queen(i,j)){board[i][j] += 1*factor;}
+      counter++;
     }
     for(int i = r+1; i > 0; i--){
-      for(int j = c+1; j < size; j++){
-        if(!Queen(i,j)){board[i][j] += 1*factor;}
-      }
+      int counter = 1;
+      int j = c + counter;
+      if(!Queen(i,j)){board[i][j] += 1*factor;}
+      counter++;
     }
   }
 
