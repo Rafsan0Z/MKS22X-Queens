@@ -30,7 +30,7 @@ public class QueenBoard{
   }
 
   private void MarkUp(int r, int c, int factor){
-    for(int i = 0; i < size && i != c; i++){
+    for(int i = c+1; i < size; i++){
       board[r][i] += 1*factor;
     }
     for(int j = 0; j < size && j != r; j++){
