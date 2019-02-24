@@ -114,6 +114,18 @@ public class QueenBoard{
     }
   }
 
+  public String DebugtoString(){
+    String result = "";
+    for(int i = 0; i < size; i++){
+		for(int j = 0; j < size; j++){
+		  result += board[i][j];
+			if(j == size - 1){result += '\n';}
+			else{result += "__";}
+	}
+	}
+  return result;
+  }
+
   public String toString(){
     String result = "";
     for(int i = 0; i < size; i++){
@@ -200,6 +212,10 @@ public class QueenBoard{
 	}
   else if(option == 6){
     puzzle.clear();
+    System.out.println("Chose another Option: ");
+    option = in.nextInt();
+  }
+  else if(option == 7){
     System.out.println("Chose another Option: ");
     option = in.nextInt();
   }
