@@ -216,6 +216,8 @@ public class QueenBoard{
     option = in.nextInt();
   }
   else if(option == 7){
+    String print = puzzle.DebugtoString();
+    System.out.println(print);
     System.out.println("Chose another Option: ");
     option = in.nextInt();
   }
