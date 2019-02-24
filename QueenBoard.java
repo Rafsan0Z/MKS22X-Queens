@@ -36,13 +36,13 @@ public class QueenBoard{
     for(int j = 0; j < size && j != r; j++){
       board[j][c] += 1*factor;
     }
-    for(int i = r; i < size; i++){
-      for(int j = c; j < size; j++){
+    for(int i = r+1; i < size; i++){
+      for(int j = c+1; j < size; j++){
         if(!Queen(i,j)){board[i][j] += 1*factor;}
       }
     }
-    for(int i = r; i > 0; i--){
-      for(int j = c; j < size; j++){
+    for(int i = r+1; i > 0; i--){
+      for(int j = c+1; j < size; j++){
         if(!Queen(i,j)){board[i][j] += 1*factor;}
       }
     }
@@ -67,6 +67,7 @@ public class QueenBoard{
 		System.out.println("No Queen Found");
 		return false;
 	}
+  board[r][c] += 1;
    MarkUp(r,c,-1);
    System.out.println("Queen Succesfully removed!");
 	 return true;
