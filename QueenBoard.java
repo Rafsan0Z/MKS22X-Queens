@@ -34,8 +34,8 @@ public class QueenBoard{
     for(int i = c+1; i < size; i++){
       board[r][i] += 1*factor;
     }
-    for(int j = 0; j < size && j != r; j++){
-      board[j][c] += 1*factor;
+    for(int j = 0; j < size; j++){
+      if(j != r){board[j][c] += 1*factor;}
     }
     for(int i = r+1; i < size; i++){
       int j = c + counter;
@@ -43,7 +43,7 @@ public class QueenBoard{
       counter++;
     }
     counter = 1;
-    for(int i = r+1; i > 0; i--){
+    for(int i = r-1; i > 0; i--){
       int j = c + counter;
       if(!Queen(i,j)){board[i][j] += 1*factor;}
       counter++;
@@ -81,7 +81,11 @@ public class QueenBoard{
   }
 
   public void removeAllQueen(){
-
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
+        if(board[i][j] == - 1){board[i][j] = 0;}
+      }
+    }
   }
 
   public boolean solveHelper(int r, int c){
