@@ -152,6 +152,14 @@ public class QueenBoard{
       System.out.println("Make sure that the file is inside the directory!");
       System.out.println("_______________________________");
       System.out.println("Please input the path from the file explorer");
+      String path = in.nextLine();
+      File file = new File(path);
+      if(file.exists()){
+        System.out.println("Thank you!")
+      }
+      else{
+        System.out.println("Sorry, the path is incorrect or the file does not exist!");
+      }
     }
     int num = 0;
     boolean taken = true;
