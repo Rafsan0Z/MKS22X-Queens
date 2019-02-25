@@ -149,7 +149,9 @@ public class QueenBoard{
     System.out.println("If you wish to run a driver file press &. Otherwise press %");
     String func = in.nextLine();
     if(func.equals("&")){
-      
+      System.out.println("Make sure that the file is inside the directory!");
+      System.out.println("_______________________________");
+      System.out.println("Please input the path from the file explorer");
     }
     int num = 0;
     boolean taken = true;
