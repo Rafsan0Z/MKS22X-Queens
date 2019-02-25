@@ -146,6 +146,11 @@ public class QueenBoard{
 
   public static void main(String[] args){
     Scanner in = new Scanner(System.in);
+    System.out.println("If you wish to run a driver file press &. Otherwise press %");
+    String func = in.nextLine();
+    if(func.equals("&")){
+      
+    }
     int num = 0;
     boolean taken = true;
     while(taken){
