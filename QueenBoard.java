@@ -173,6 +173,15 @@ public class QueenBoard{
       File file = new File(path);
       if(file.exists()){
         System.out.println("Thank you!")
+        try {
+            runProcess("pwd");
+            System.out.println("**********");
+            runProcess("javac -cp src src/com/journaldev/files/Test.java");
+            System.out.println("**********");
+            runProcess("java -cp src com/journaldev/files/Test Hi Pankaj");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
       }
       else{
         System.out.println("Sorry, the path is incorrect or the file does not exist!");
