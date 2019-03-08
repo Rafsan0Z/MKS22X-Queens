@@ -1,5 +1,3 @@
-import java.util.Scanner;
-import java.util.InputMismatchException;
 public class QueenBoard{
 
   private int[][] board;
@@ -8,8 +6,6 @@ public class QueenBoard{
   public QueenBoard(int Size){
     board = new int[Size][Size];
     size = Size;
-    Solutions = 0;
-  //  setSolution();
   }
 
   public int getSize(){
