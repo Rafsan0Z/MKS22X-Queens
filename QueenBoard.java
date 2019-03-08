@@ -25,27 +25,6 @@ public class QueenBoard{
     return board[r][c] == -1;
   }
 
-  private void MarkUp(int r, int c, int factor){
-    int counter = 1;
-    for(int i = c+1; i < size; i++){
-      board[r][i] += 1*factor;
-    }
-    for(int j = 0; j < size; j++){
-      if(j != r){board[j][c] += 1*factor;}
-    }
-    for(int i = r+1; i < size; i++){
-      int j = c + counter;
-      if(!Queen(i,j)){board[i][j] += 1*factor;}
-      counter++;
-    }
-    counter = 1;
-    for(int i = r-1; i > 0; i--){
-      int j = c + counter;
-      if(!Queen(i,j)){board[i][j] += 1*factor;}
-      counter++;
-    }
-  }
-
   private boolean addQueen(int r, int c){
     if(r >= size || c >= size || r < 0 || c < 0){
       return false;
