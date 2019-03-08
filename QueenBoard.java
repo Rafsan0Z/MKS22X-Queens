@@ -78,7 +78,7 @@ public class QueenBoard{
     for(int i = 1; i < size; i++){
       boolean check = addQueen(r,i) && solveHelper(r+1);
       if(check){return true;}
-      removeQueen(r,i);
+      else{removeQueen(r,i);}
     }
     return false;
   }
