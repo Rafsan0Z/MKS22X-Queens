@@ -94,7 +94,7 @@ public class QueenBoard{
       boolean check = addQueen(row,i);
       if(check){
         count += counterHelper(row+1,0);
-        removeQueen(row,col);
+        removeQueen(row,i);
       }
     }
     return count;
@@ -104,18 +104,6 @@ public class QueenBoard{
     for(int i = 0; i < size; i++){
       for(int j = 0; j < size; j++){
         board[i][j] = 0;
-      }
-    }
-  }
-
-  public void setSolution(){
-    for(int i = 0; i < size; i++){
-      for(int j = 0; j < size; j++){
-        if(!Queen(i,j)){
-          addQueen(i,j);
-          if(i > size-1){Solutions++;}
-          removeQueen(i,j);
-        }
       }
     }
   }
