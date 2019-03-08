@@ -4,7 +4,6 @@ public class QueenBoard{
 
   private int[][] board;
   private int size;
-  private int Solutions;
 
   public QueenBoard(int Size){
     board = new int[Size][Size];
