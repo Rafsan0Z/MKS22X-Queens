@@ -84,11 +84,12 @@ public class QueenBoard{
   }
 
   public int countSolutions(){
+    int count = 0;
     return Solutions;
   }
 
-  public int counterHelper(){
-    
+  public int counterHelper(int row, int count){
+    if(row > size - 1){return 1;}
   }
 
   public void clear(){
