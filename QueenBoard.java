@@ -21,6 +21,10 @@ public class QueenBoard{
     board[row][col] += 1;
   }
 
+  private void MarkDown(int row, int col){
+    
+  }
+
   private boolean Queen(int r, int c){
     return board[r][c] == -1;
   }
