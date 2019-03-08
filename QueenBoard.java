@@ -85,11 +85,21 @@ public class QueenBoard{
 
   public int countSolutions(){
     int count = 0;
-    return Solutions;
+    removeAllQueen();
+    addQueen(0,0);
+    return counterHelper(0,0);
   }
 
   public int counterHelper(int row, int count){
     if(row > size - 1){return 1;}
+    for(int i = 1; i < size; i++){
+      boolean check = addQueen(row,i);
+      if(check){
+        count += counterHelper(row+1,0);
+        removeQueen(row,col);
+      }
+    }
+    return count;
   }
 
   public void clear(){
