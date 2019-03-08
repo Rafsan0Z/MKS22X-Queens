@@ -22,7 +22,7 @@ public class QueenBoard{
   }
 
   private void MarkDown(int row, int col){
-    
+
   }
 
   private boolean Queen(int r, int c){
@@ -63,7 +63,7 @@ public class QueenBoard{
 
   public boolean solve(){
     addQueen(0,0);
-	  return solveHelper(0,0);
+	  return solveHelper(0);
   }
 
   public void removeAllQueen(){ // removes only the queen not the Marks
@@ -74,12 +74,14 @@ public class QueenBoard{
     }
   }
 
-  public boolean solveHelper(int r, int c){
-    if(c >= size -1 && r >= size - 1){return true;}
-    if(board[r][c+1] == 0){
-      addQueen(r,c+1);
+  public boolean solveHelper(int r){
+    if(row > size - 1){return true;}
+    for(int i = 1; i < size; i++){
+      boolean check = addQueen(r,i) && solveHelper(r+1);
+      if(check){return true;}
+      removeQueen(r,i);
     }
-    return solveHelper(r+1,c+1);
+    return false;
   }
 
   public int countSolutions(){
