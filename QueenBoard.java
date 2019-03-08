@@ -12,7 +12,7 @@ public class QueenBoard{
     return size;
   }
 
-  private void MarkUp(int row, int col){
+  private void MarkUp(int r, int c){
     for(int i = 0; i < size; i++){
       board[r+i][c] += 1;
       board[r-i][c] += 1;
@@ -22,7 +22,7 @@ public class QueenBoard{
     }
   }
 
-  private void MarkDown(int row, int col){
+  private void MarkDown(int r, int c){
     for(int i = 0; i < size; i++){
       board[r+i][c] -= 1;
       board[r-i][c] -= 1;
@@ -72,7 +72,7 @@ public class QueenBoard{
   }
 
   public boolean solveHelper(int r){
-    if(row > size - 1){return true;}
+    if(r > size - 1){return true;}
     for(int i = 1; i < size; i++){
       boolean check = addQueen(r,i) && solveHelper(r+1);
       if(check){return true;}
