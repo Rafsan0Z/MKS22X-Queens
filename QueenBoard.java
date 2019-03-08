@@ -17,12 +17,8 @@ public class QueenBoard{
     return size;
   }
 
-  private void MarkUp(){
-    for(int i = 0; i < size; i++){
-      for(int j = 0; j < size; j++){
-
-      }
-    }
+  private void MarkUp(int row, int col){
+    board[row][col] += 1;
   }
 
   private boolean Queen(int r, int c){
