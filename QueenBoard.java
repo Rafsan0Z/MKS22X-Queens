@@ -17,7 +17,13 @@ public class QueenBoard{
   }
 
   private void MarkUp(int row, int col){
-    board[row][col] += 1;
+    for(int i = 0; i < size; i++){
+      board[r+i][c] += 1;
+      board[r-i][c] += 1;
+      board[r+i][c+i] += 1;
+      board[r-i][c+i] += 1;
+      board[r][c-i] += 1;
+    }
   }
 
   private void MarkDown(int row, int col){
@@ -39,13 +45,7 @@ public class QueenBoard{
       return false;
     }
     board[r][c] = -1;
-    for(int i = 0; i < size; i++){
-      MarkUp(r+i,c);
-      MarkUp(r-i,c);
-      MarkUp(r+i,c+i);
-      MarkUp(r-i,c+i);
-      MarkUp(r,c-i);
-    }
+    MarkUp(r,c);
     return true;
   }
 
