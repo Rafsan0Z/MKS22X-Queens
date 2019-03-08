@@ -56,14 +56,10 @@ public class QueenBoard{
   }
 
   private boolean removeQueen(int r, int c){
-    if(board[r][c] != -1){
-		System.out.println("No Queen Found");
-		return false;
-	}
-  board[r][c] += 1;
-   MarkDown(r,c);
-   System.out.println("Queen Succesfully removed!");
-	 return true;
+    if(board[r][c] != -1){return false;}
+    board[r][c] += 1;
+    MarkDown(r,c);
+	  return true;
   }
 
   public boolean solve(){
