@@ -27,7 +27,13 @@ public class QueenBoard{
   }
 
   private void MarkDown(int row, int col){
-
+    for(int i = 0; i < size; i++){
+      board[r+i][c] -= 1;
+      board[r-i][c] -= 1;
+      board[r+i][c+i] -= 1;
+      board[r-i][c+i] -= 1;
+      board[r][c-i] -= 1;
+    }
   }
 
   private boolean Queen(int r, int c){
@@ -55,7 +61,7 @@ public class QueenBoard{
 		return false;
 	}
   board[r][c] += 1;
-   MarkUp(r,c,-1);
+   MarkDown(r,c);
    System.out.println("Queen Succesfully removed!");
 	 return true;
   }
