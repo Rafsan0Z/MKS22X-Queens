@@ -55,12 +55,19 @@ public class QueenBoard{
       return false;
     }
     if(board[r][c] == -1){
-      System.out.println("Queen already exists!");
+      return false;
+    }
+    if(board[r][c] > 0){
       return false;
     }
     board[r][c] = -1;
-    MarkUp(r,c,1);
-    System.out.println("Queen Succesfully added!");
+    for(int i = 0; i < size; i++){
+      MarkUp(r+i,c);
+      MarkUp(r-i,c);
+      MarkUp(r+i,c+i);
+      MarkUp(r-i,c+i);
+      MarkUp(r,c-i);
+    }
     return true;
   }
 
