@@ -21,21 +21,21 @@ public class QueenBoard{
 
   private void MarkUp(int r, int c){
     for(int i = 1; i < size; i++){
-      if(inBounds(r+i,c){board[r+i][c] += 1;}
-      if(inBounds(r-i,c){board[r-i][c] += 1;}
-      if(inBounds(r+i,c+i){board[r+i][c+i] += 1;}
-      if(inBounds(r-i,c+i){board[r-i][c+i] += 1;}
-      if(inBounds(r,c-i){board[r][c-i] += 1;}
+      if(inBounds(r+i,c)){board[r+i][c] += 1;}
+      if(inBounds(r-i,c)){board[r-i][c] += 1;}
+      if(inBounds(r+i,c+i)){board[r+i][c+i] += 1;}
+      if(inBounds(r-i,c+i)){board[r-i][c+i] += 1;}
+      if(inBounds(r,c-i)){board[r][c-i] += 1;}
     }
   }
 
   private void MarkDown(int r, int c){
     for(int i = 1; i < size; i++){
-      if(inBounds(r+i,c){board[r+i][c] -= 1;}
-      if(inBounds(r-i,c){board[r-i][c] -= 1;}
-      if(inBounds(r+i,c+i){board[r+i][c+i] -= 1;}
-      if(inBounds(r-i,c+i){board[r-i][c+i] -= 1;}
-      if(inBounds(r,c-i){board[r][c-i] -= 1;}
+      if(inBounds(r+i,c)){board[r+i][c] -= 1;}
+      if(inBounds(r-i,c)){board[r-i][c] -= 1;}
+      if(inBounds(r+i,c+i)){board[r+i][c+i] -= 1;}
+      if(inBounds(r-i,c+i)){board[r-i][c+i] -= 1;}
+      if(inBounds(r,c-i)){board[r][c-i] -= 1;}
     }
   }
 
@@ -138,6 +138,14 @@ public class QueenBoard{
 	}
 	}
   return result;
+  }
+
+  public static void main(String[] args){
+
+    QueenBoard q = new QueenBoard(8);
+    q.solve();
+    System.out.println(q.countSolutions());
+
   }
 
 }
