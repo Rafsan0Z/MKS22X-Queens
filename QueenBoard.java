@@ -59,6 +59,7 @@ public class QueenBoard{
   }
 
   private boolean removeQueen(int r, int c){
+    if(!inBounds(r,c)){return false;}
     if(board[r][c] != -1){return false;}
     board[r][c] += 1;
     MarkDown(r,c);
