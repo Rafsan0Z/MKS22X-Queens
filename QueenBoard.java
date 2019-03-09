@@ -21,21 +21,21 @@ public class QueenBoard{
 
   private void MarkUp(int r, int c){
     for(int i = 1; i < size; i++){
-      board[r+i][c] += 1;
-      board[r-i][c] += 1;
-      board[r+i][c+i] += 1;
-      board[r-i][c+i] += 1;
-      board[r][c-i] += 1;
+      if(inBounds(r+i,c){board[r+i][c] += 1;}
+      if(inBounds(r-i,c){board[r-i][c] += 1;}
+      if(inBounds(r+i,c+i){board[r+i][c+i] += 1;}
+      if(inBounds(r-i,c+i){board[r-i][c+i] += 1;}
+      if(inBounds(r,c-i){board[r][c-i] += 1;}
     }
   }
 
   private void MarkDown(int r, int c){
-    for(int i = 0;r+i < size && c+i < size; i++){
-      board[r+i][c] -= 1;
-      board[r-i][c] -= 1;
-      board[r+i][c+i] -= 1;
-      board[r-i][c+i] -= 1;
-      board[r][c-i] -= 1;
+    for(int i = 1; i < size; i++){
+      if(inBounds(r+i,c){board[r+i][c] -= 1;}
+      if(inBounds(r-i,c){board[r-i][c] -= 1;}
+      if(inBounds(r+i,c+i){board[r+i][c+i] -= 1;}
+      if(inBounds(r-i,c+i){board[r-i][c+i] -= 1;}
+      if(inBounds(r,c-i){board[r][c-i] -= 1;}
     }
   }
 
