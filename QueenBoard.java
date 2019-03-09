@@ -44,7 +44,7 @@ public class QueenBoard{
   }
 
   private boolean addQueen(int r, int c){
-    if(r >= size || c >= size || r < 0 || c < 0){
+    if(!inBounds(r,c)){
       return false;
     }
     if(board[r][c] == -1){
