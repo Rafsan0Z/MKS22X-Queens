@@ -12,6 +12,13 @@ public class QueenBoard{
     return size;
   }
 
+  private boolean inBounds(int r, int c){
+    if(r < size && r >= 0 && c < size && c >= 0){
+      return true;
+    }
+    return false;
+  }
+
   private void MarkUp(int r, int c){
     for(int i = 1; i < size; i++){
       board[r+i][c] += 1;
