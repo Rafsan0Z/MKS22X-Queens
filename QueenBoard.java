@@ -13,7 +13,7 @@ public class QueenBoard{
   }
 
   private void MarkUp(int r, int c){
-    for(int i = 0; i < size; i++){
+    for(int i = 1; i < size; i++){
       board[r+i][c] += 1;
       board[r-i][c] += 1;
       board[r+i][c+i] += 1;
@@ -23,7 +23,7 @@ public class QueenBoard{
   }
 
   private void MarkDown(int r, int c){
-    for(int i = 0; i < size; i++){
+    for(int i = 0;r+i < size && c+i < size; i++){
       board[r+i][c] -= 1;
       board[r-i][c] -= 1;
       board[r+i][c+i] -= 1;
