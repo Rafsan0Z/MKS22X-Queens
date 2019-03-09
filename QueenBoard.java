@@ -81,12 +81,12 @@ public class QueenBoard{
     }
   }
 
-  public boolean solveHelper(int r){
-    if(r > size - 1){return true;}
+  public boolean solveHelper(int c){
+    if(c >= size){return true;}
     for(int i = 1; i < size; i++){
-      boolean check = addQueen(r,i) && solveHelper(r+1);
+      boolean check = addQueen(i,c) && solveHelper(c+1);
       if(check){return true;}
-      else{removeQueen(r,i);}
+      else{removeQueen(i,c);}
     }
     return false;
   }
