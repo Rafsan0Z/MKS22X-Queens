@@ -145,8 +145,8 @@ public class QueenBoard{
   public static void main(String[] args){
 
     QueenBoard q = new QueenBoard(8);
-    q.addQueen(0,0);
-    System.out.println(q.DebugtoString());
+    q.solve();
+    System.out.println(q);
 
   }
 
