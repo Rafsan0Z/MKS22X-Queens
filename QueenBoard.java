@@ -70,7 +70,7 @@ public class QueenBoard{
 
   public boolean solve(){
     addQueen(0,0);
-	  return solveHelper(0);
+	  return solveHelper(1);
   }
 
   public void removeAllQueen(){ // removes only the queen not the Marks
@@ -145,8 +145,8 @@ public class QueenBoard{
   public static void main(String[] args){
 
     QueenBoard q = new QueenBoard(8);
-    q.;
-    System.out.println(q.DebugtoString());
+    q.solve();
+    System.out.println(q.countSolutions());
 
   }
 
