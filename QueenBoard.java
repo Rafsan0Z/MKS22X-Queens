@@ -76,7 +76,10 @@ public class QueenBoard{
   public void removeAllQueen(){ // removes only the queen not the Marks
     for(int i = 0; i < size; i++){
       for(int j = 0; j < size; j++){
-        if(board[i][j] == - 1){board[i][j] = 0;}
+        if(board[i][j] == - 1){
+          board[i][j] = 0;
+          MarkDown(i,j);
+        }
       }
     }
   }
@@ -143,9 +146,9 @@ public class QueenBoard{
 
   public static void main(String[] args){
 
-    QueenBoard q = new QueenBoard(18);
-    //q.solve();
-    //System.out.println(q);
+    QueenBoard q = new QueenBoard(args[0]);
+    q.solve();
+    System.out.println(q);
     System.out.println(q.countSolutions());
 
   }
