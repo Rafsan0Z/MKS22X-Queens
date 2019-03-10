@@ -94,8 +94,7 @@ public class QueenBoard{
   public int countSolutions(){
     int count = 0;
     removeAllQueen();
-    addQueen(0,0);
-    return counterHelper(1,count);
+    return counterHelper(0,count);
   }
 
   public int counterHelper(int col, int count){
