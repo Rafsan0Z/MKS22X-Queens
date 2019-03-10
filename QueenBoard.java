@@ -41,10 +41,6 @@ public class QueenBoard{
     }
   }
 
-  private boolean Queen(int r, int c){
-    return board[r][c] == -1;
-  }
-
   private boolean addQueen(int r, int c){
     if(!inBounds(r,c)){
       return false;
