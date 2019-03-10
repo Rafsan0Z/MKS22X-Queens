@@ -25,7 +25,7 @@ public class QueenBoard{
       if(inBounds(r-i,c)){board[r-i][c] += 1;}
       if(inBounds(r+i,c+i)){board[r+i][c+i] += 1;}
       if(inBounds(r-i,c+i)){board[r-i][c+i] += 1;}
-      if(inBounds(r,c-i)){board[r][c-i] += 1;}
+//      if(inBounds(r,c-i)){board[r][c-i] += 1;}
       if(inBounds(r,c+i)){board[r][c+i] += 1;}
     }
   }
@@ -36,7 +36,7 @@ public class QueenBoard{
       if(inBounds(r-i,c)){board[r-i][c] -= 1;}
       if(inBounds(r+i,c+i)){board[r+i][c+i] -= 1;}
       if(inBounds(r-i,c+i)){board[r-i][c+i] -= 1;}
-      if(inBounds(r,c-i)){board[r][c-i] -= 1;}
+//      if(inBounds(r,c-i)){board[r][c-i] -= 1;}
       if(inBounds(r,c+i)){board[r][c+i] -= 1;}
     }
   }
@@ -145,8 +145,8 @@ public class QueenBoard{
   public static void main(String[] args){
 
     QueenBoard q = new QueenBoard(8);
-    q.solve();
-    System.out.println(q);
+    q.;
+    System.out.println(q.DebugtoString());
 
   }
 
