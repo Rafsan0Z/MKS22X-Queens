@@ -146,7 +146,7 @@ public class QueenBoard{
 
   public static void main(String[] args){
 
-    QueenBoard q = new QueenBoard(args[0]);
+    QueenBoard q = new QueenBoard(Integer.parseInt(args[0]));
     q.solve();
     System.out.println(q);
     System.out.println(q.countSolutions());
