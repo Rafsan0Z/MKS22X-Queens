@@ -65,8 +65,7 @@ public class QueenBoard{
   }
 
   public boolean solve(){
-    addQueen(0,0);
-	  return solveHelper(1);
+	  return solveHelper(0);
   }
 
   public void removeAllQueen(){ // removes only the queen not the Marks
@@ -82,7 +81,7 @@ public class QueenBoard{
 
   public boolean solveHelper(int c){
     if(c >= size){return true;}
-    for(int i = 1; i < size; i++){
+    for(int i = 0; i < size; i++){
       boolean check = addQueen(i,c) && solveHelper(c+1);
       if(check){return true;}
       else{removeQueen(i,c);}
