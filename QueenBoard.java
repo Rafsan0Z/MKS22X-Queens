@@ -95,16 +95,16 @@ public class QueenBoard{
     int count = 0;
     removeAllQueen();
     addQueen(0,0);
-    return counterHelper(0,0);
+    return counterHelper(1,count);
   }
 
-  public int counterHelper(int row, int count){
-    if(row > size - 1){return 1;}
-    for(int i = 1; i < size; i++){
-      boolean check = addQueen(row,i);
+  public int counterHelper(int col, int count){
+    if(col >= size){return 1;}
+    for(int i = 0; i < size; i++){
+      boolean check = addQueen(i,col);
       if(check){
-        count += counterHelper(row+1,0);
-        removeQueen(row,i);
+        count += counterHelper(col+1,0);
+        removeQueen(i,col);
       }
     }
     return count;
@@ -145,7 +145,7 @@ public class QueenBoard{
   public static void main(String[] args){
 
     QueenBoard q = new QueenBoard(8);
-    q.solve();
+    //q.solve();
     System.out.println(q.countSolutions());
 
   }
